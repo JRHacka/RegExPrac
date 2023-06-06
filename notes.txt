@@ -1,0 +1,14 @@
+Step 1 - Understand the requirements
+Step 2 - Identify Patterns
+Step 3 - Use patters to represent the reg ex
+Step 4 - Use grap or something to apply it and see if it works
+
+Almsot all major regex engines are posix standard compliant
+POSIX = Portable Operating System Interface and is an IEE Standard
+
+grep 'fooa*bar' regex01.txt 
+fooaaaabar
+fooabar
+foobar
+fooaabar
+
