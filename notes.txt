@@ -12,3 +12,86 @@ fooabar
 foobar
 fooaabar
 
+wild card symbol is .
+cat regex02.txt      
+fooabar
+fooxbar
+baryfoo
+foobar
+fooxybar
+foocbar
+                                                                                                                                                                                                                  
+┌──(jrhacka㉿Purp)-[~/Projects/RegExPrac/ExerciseInputFiles]
+└─$ grep 'foo.bar' regex02.txt 
+fooabar
+fooxbar
+foocbar
+
+.* would find any number of wildcard options 
+cat regex03.txt 
+foobar
+barfoo
+fooabcbar
+foobxcbar
+barcbyfoo
+foozbar
+barafoo
+barabfoo
+                                                                                                                                                                                                                  
+┌──(jrhacka㉿Purp)-[~/Projects/RegExPrac/ExerciseInputFiles]
+└─$ grep 'foo.*bar' regex03.txt 
+foobar
+fooabcbar
+foobxcbar
+foozbar
+
+\s is for space, so \s* is any number of spaces
+cat regex04.txt 
+fooxxxbar
+foo   bar
+fooxbar
+fooxxbar
+foo bar
+foo      bar
+foobar
+fooyyybar
+                                                                                                                                                                                                                  
+┌──(jrhacka㉿Purp)-[~/Projects/RegExPrac/ExerciseInputFiles]
+└─$ grep 'foo\s*bar' regex04.txt 
+foo   bar
+foo bar
+foo      bar
+foobar
+            
+cat regex05.txt 
+foo
+moo
+coo
+doo
+poo
+loo
+boo
+hoo
+                                                                                                                                                                                                                  
+┌──(jrhacka㉿Purp)-[~/Projects/RegExPrac/ExerciseInputFiles]
+└─$ grep '[fcl]oo' regex05.txt 
+foo
+coo
+loo
+
+Can do opposite of letters you use via the carrot top - ^
+cat regex06.txt           
+foo
+moo
+coo
+doo
+poo
+loo
+boo
+hoo
+                                                                                                                                                                                                                  
+┌──(jrhacka㉿Purp)-[~/Projects/RegExPrac/ExerciseInputFiles]
+└─$ grep '^[mh]oo' regex06.txt
+moo
+hoo
+        
